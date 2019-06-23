@@ -1,30 +1,32 @@
+attendes = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
+
 def badge_maker(name)
   return "Hello, my name is #{name}."
-end 
+end
 
-def batch_badge_creator(speakers)
-  badge_message = []
-  speakers.each {|name|message = badge_maker(name) 
-  badge_message << message} 
-  badge_message
-end 
+def batch_badge_creator(attendes)
+  return_badges = []
+     attendes.each {|name| 
+     return_badges << badge_maker(name)}
+  return_badges
+end
 
-def assign_rooms(speakers)
-  room_number = 1
-  room_messages = []
-  speakers.each{|speaker|
-    room_messages << "Hello, #{speaker}! You'll be assigned to room #{room_number}!"
-    room_number += 1}
-  room_messages
-end 
+def assign_rooms(attendes)
+    room_num = 1 
+    room_assignment = []
+       attendes.each { |name|
+       room_assignment << "Hello, #{name}! You'll be assigned to room #{room_num}!" 
+       room_num += 1 }
+  room_assignment
+end
 
-def printer(speakers)
-  badge_message = batch_badge_creator(speakers)
+def printer(attendes)
+  badge_message = batch_badge_creator(attendes)
   badge_message.each{|message|
-    puts message}
-  room_messages = assign_rooms(speakers)
-  room_messages.each{|message|
-    puts message}
-end 
+  puts message}
+  room_message = assign_rooms(attendes)
+  room_message.each{|message|
+  puts message}
+end
 
 
