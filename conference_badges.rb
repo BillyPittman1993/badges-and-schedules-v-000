@@ -19,3 +19,7 @@ def assign_rooms(attendes)
        room_num += 1 }
   room_assignment
 end
+
+def printer(attendes)
+  
+end
