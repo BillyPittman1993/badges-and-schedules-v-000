@@ -26,7 +26,8 @@ end
     # To make this test pass, make sure you are iterating through your badges and room assignments lists.
 
 def printer(attendes)
-  batch_badge_creator
+  batch_badge_creator.each do |line| 
+    puts ""
 end
 
 
