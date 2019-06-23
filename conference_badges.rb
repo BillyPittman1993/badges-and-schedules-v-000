@@ -27,7 +27,7 @@ end
 
 def printer(attendes)
   batch_badge_creator.each do |line| 
-    puts ""
+    puts 
 end
 
 
